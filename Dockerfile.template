@@ -1,0 +1,43 @@
+# base-image for python on any machine using a template variable,
+# see more about dockerfile templates here: https://www.balena.io/docs/learn/develop/dockerfile/
+FROM balenalib/jetson-nano-ubuntu-python as base
+
+# use `install_packages` if you need to install dependencies,
+# for instance if you need git, just uncomment the line below.
+# RUN install_packages git
+RUN install_packages wget python3-dev bzip2 sudo 
+RUN install_packages libjpeg-dev libpng-dev libtiff-dev libavcodec-dev libavformat-dev libswscale-dev libv4l-dev libxvidcore-dev libx264-dev
+RUN install_packages libgtk-3-dev libatlas-base-dev gfortran
+RUN install_packages libsm6 libxext6
+RUN install_packages tesseract-ocr python3-opencv
+
+RUN wget https://bootstrap.pypa.io/get-pip.py
+RUN python3 get-pip.py
+
+# RUN pip install virtualenv virtualenvwrapper
+RUN rm -rf ~/get-pip.py
+
+# RUN mkdir -p /opt/virtualenvs
+# ENV WORKON_HOME /opt/virtualenvs
+# ENV VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+# RUN /bin/bash -c "source /usr/local/bin/virtualenvwrapper.sh \
+#    && mkvirtualenv cv \
+#    && workon cv"
+
+# Set our working directory
+WORKDIR /usr/src/app
+
+# Copy requirements.txt first for better cache on later pushes
+COPY requirements.txt requirements.txt
+
+# pip install python deps from requirements.txt on the resin.io build server
+RUN pip install -r requirements.txt
+
+# This will copy all files in our root to the working  directory in the container
+COPY . ./
+
+# Enable udevd so that plugged dynamic hardware devices show up in our container.
+ENV UDEV=1
+
+# main.py will run when container starts up on the device
+CMD ["python3","-u","src/main.py"]
