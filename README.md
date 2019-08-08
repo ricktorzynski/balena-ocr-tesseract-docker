@@ -1,8 +1,6 @@
-## A Simple Server with Python Flask
+## Balena OCR Tesseract Docker app
 
-This is a simple skeleton Flask server project that works on any of the devices supported by [balena][balena-link].
-
-This project simply serves up `"Hello World!"` on port `:80` of your balena device.
+Allows upload of an image for OCR using Tesseract and deployed using Docker. This uses Flask, a light weight web server framework - but for development purposes only. OpenCV is used to reduce noise in the image for better processing by pytesseract.  This was originally an app to be deployed on a Docker container - this version is revised to be deployed to BalenaCloud to a Jetson Nano device.
 
 To get this project up and running, you will need to signup for a balena account [here][signup-page] and set up a device, have a look at our [Getting Started tutorial][gettingStarted-link]. Once you are set up with balena, you will need to clone this repo locally:
 ```
