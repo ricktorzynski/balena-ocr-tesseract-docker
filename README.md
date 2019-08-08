@@ -16,13 +16,15 @@ $ git push balena master
 ```
 It should take a few minutes for the code to push. While you wait, lets enable device URLs so we can see the server outside of our local network. This option can be toggled on the device summary page, pictured below or in the `Actions` tab in your device dashboards.
 
-![Enable device URL](/img/enable-public-URLs.png)
+![Enable device URL](/img/balenacloud.png)
 
-Once the device is updated, you should see this in your logs:
-![log output](/img/log-output.png)
+If you go to the public URL enabled above, you should see:
+![app index](/img/balenacloud2.png)
 
-Then in your browser you should be able to open the device URL and see the message "Hello World!".
+And if you upload an image to be OCRed, you should see:
+![ocr](/img/balenacloud3.png)
 
+balenaCloud is a great way to test and manage deployments of apps to entire FLEETS of IoT devices!
 
 [balena-link]:https://balena.io/
 [signup-page]:https://dashboard.balena-cloud.com/signup
