@@ -1,6 +1,6 @@
 ## Balena OCR Tesseract Docker app
 
-Allows upload of an image for OCR using Tesseract and deployed using Docker. This uses Flask, a light weight web server framework - but for development purposes only. OpenCV is used to reduce noise in the image for better processing by pytesseract.  This was originally an app to be deployed on a Docker container - this version is revised to be deployed to BalenaCloud to a Jetson Nano device.
+Allows upload of an image for OCR using Tesseract and deployed using Docker. This uses Flask, a light weight web server framework - but for development purposes only. OpenCV is used to reduce noise in the image for better processing by pytesseract.  This was originally an app deployed on a Docker container on AWS - this version is revised to be deployed to BalenaCloud to a Jetson Nano device.
 
 To get this project up and running, you will need to signup for a balena account [here][signup-page] and set up a device, have a look at our [Getting Started tutorial][gettingStarted-link]. Once you are set up with balena, you will need to clone this repo locally:
 ```
