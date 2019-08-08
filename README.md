@@ -4,7 +4,7 @@ Allows upload of an image for OCR using Tesseract and deployed using Docker. Thi
 
 To get this project up and running, you will need to signup for a balena account [here][signup-page] and set up a device, have a look at our [Getting Started tutorial][gettingStarted-link]. Once you are set up with balena, you will need to clone this repo locally:
 ```
-$ git clone git@github.com:balena-projects/simple-server-python.git
+$ git clone https://github.com/ricktorzynski/balena-ocr-tesseract-docker.git
 ```
 Then add your balena application's remote:
 ```
