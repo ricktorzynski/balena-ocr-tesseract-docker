@@ -14,15 +14,7 @@ RUN install_packages tesseract-ocr python3-opencv
 RUN wget https://bootstrap.pypa.io/get-pip.py
 RUN python3 get-pip.py
 
-# RUN pip install virtualenv virtualenvwrapper
 RUN rm -rf ~/get-pip.py
-
-# RUN mkdir -p /opt/virtualenvs
-# ENV WORKON_HOME /opt/virtualenvs
-# ENV VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
-# RUN /bin/bash -c "source /usr/local/bin/virtualenvwrapper.sh \
-#    && mkvirtualenv cv \
-#    && workon cv"
 
 # Set our working directory
 WORKDIR /usr/src/app
