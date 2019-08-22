@@ -26,6 +26,9 @@ And if you upload an image to be OCRed, you should see:
 
 balenaCloud is a great way to test and manage deployments of apps to entire FLEETS of IoT devices!
 
+Here is a link to the original [ocr-tesseract-docker] project that was deployed to AWS.
+
 [balena-link]:https://balena.io/
 [signup-page]:https://dashboard.balena-cloud.com/signup
 [gettingStarted-link]:http://balena.io/docs/learn/getting-started/
+[ocr-tesseract-docker]:https://github.com/ricktorzynski/ocr-tesseract-docker
