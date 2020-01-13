@@ -30,5 +30,5 @@ Here is a link to the original [ocr-tesseract-docker] project that was deployed 
 
 [balena-link]:https://balena.io/
 [signup-page]:https://dashboard.balena-cloud.com/signup
-[gettingStarted-link]:http://balena.io/docs/learn/getting-started/
+[gettingStarted-link]:https://www.balena.io/docs/learn/getting-started/jetson-nano/nodejs/
 [ocr-tesseract-docker]:https://github.com/ricktorzynski/ocr-tesseract-docker
